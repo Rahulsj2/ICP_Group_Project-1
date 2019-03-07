@@ -20,21 +20,21 @@ public class Observatory extends Galamsey {
 	private int yearStarted;
 	private float areaCovered;
 	private Date dateStarted;
-	private ArrayList<String> galamseyEvents;
+	private ArrayList<Galamsey> galamseyEvents;
 	
 	public Observatory() {
 		this.observatoryName = null;
 		this.countryName = null;
 		this.yearStarted = 0;
 		this.areaCovered = 0;
-		this.galamseyEvents = new ArrayList<String>();
+		this.galamseyEvents = new ArrayList<Galamsey>();
 	}
 	public Observatory(String observatoryName, String countryName, int year, float area) {
 		this.observatoryName = observatoryName;
 		this.countryName = countryName;
 		this.yearStarted = year;
 		this.areaCovered = area;
-		this.galamseyEvents = new ArrayList<String>();
+		this.galamseyEvents = new ArrayList<Galamsey>();
 	}
 	
 	public void setName(String name) {
@@ -60,11 +60,10 @@ public class Observatory extends Galamsey {
 		this.areaCovered = area;
 	}
 	
-//	public void setEvent(String[] event) {
-//		for(int i=0; i<event.length; i++) {
-//			this.galamseyEvents.add(event(i))
-//		}
-//	}
+	public void setEvent(Galamsey[] events) {
+		for(Galamsey event : events ) {
+			this.galamseyEvents.add(event);		}
+	}
 	
 	public String getName() {
 		return this.observatoryName;
@@ -87,7 +86,7 @@ public class Observatory extends Galamsey {
 		return this.areaCovered;
 	}
 	
-	public ArrayList<String> getEvents(){
+	public ArrayList<Galamsey> getEvents(){
 		return this.galamseyEvents;
 	}
 	@Override
@@ -132,6 +131,42 @@ public class Observatory extends Galamsey {
 			return false;
 		return true;
 	}
+	
+	
+	public int largestColor() {
+		int largestColorVal = 0;
+		for(Galamsey event : galamseyEvents) {
+			if( event.getColorValue() > largestColorVal) {
+				largestColorVal  = event.getColorValue();
+			}
+		}
+		return largestColorVal;
+	}
+	
+	public int averageColor() {
+		int sum = 0;
+		for(Galamsey event : galamseyEvents) {
+			sum += event.getColorValue();
+		}
+		return Math.round(sum/galamseyEvents.size());
+	
+	}
+	
+	public ArrayList<Galamsey> eventsGreater(int colorValue) {
+		ArrayList<Galamsey> events =  new ArrayList<Galamsey>();
+		for (Galamsey event : galamseyEvents) {
+			if (event.getColorValue() > colorValue) {
+				events.add(event);
+			}
+		}
+		return events;
+	}
+	
+	
+	
+	
+	
+	
 	
 	// allow to select events they want to see.
 	
