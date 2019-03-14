@@ -162,8 +162,7 @@ public class Observatory extends Galamsey {
 		return events;
 	}
 	
-	
-	
+		
 	
 	
 	

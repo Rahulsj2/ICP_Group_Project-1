@@ -106,6 +106,8 @@ public class Galamsey {
 	public static void main(String[] args) {
 		Galamsey first  = new Galamsey("Green", 1, 1999, 12.3,13.4);
 		System.out.println(first.getPosition());
+		//double v = 5.2;
+		//System.out.println(Math.round(v));
 		
 	}
 
