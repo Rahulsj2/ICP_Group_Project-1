@@ -29,6 +29,7 @@ public class Observatory extends Galamsey {
 		this.areaCovered = 0;
 		this.galamseyEvents = new ArrayList<Galamsey>();
 	}
+	
 	public Observatory(String observatoryName, String countryName, int year, float area) {
 		this.observatoryName = observatoryName;
 		this.countryName = countryName;
