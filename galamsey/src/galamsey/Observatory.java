@@ -4,7 +4,10 @@
 package galamsey;
 
 /**
- * @author rahulsrinivas
+ * @author Rahul Srinivas
+ * @author Albert Hodo
+ * @author Pamela Anang
+ * @author Jefferson Welbeck
  *
  */
 
