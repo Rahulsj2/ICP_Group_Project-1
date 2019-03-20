@@ -17,14 +17,16 @@ public class Monitoring extends Observatory {
 		this.observatories = new ArrayList<Observatory>();
 	}
 	
-	public void addObservatory(Observatory[] observatories) {
-		 for (Observatory observatory : observatories) {
-			 this.observatories.add(observatory);
-		 }
+	public void addObservatory(Observatory observatory) {
+		this.observatories.add(observatory);
+	}
+	
+	public ArrayList<Observatory> getObservatories(){
+		return this.observatories;
 	}
 	
 	public Observatory largestAverage() {
-		Observatory largestAverage = observatories.get(0);
+		Observatory largestAverage = null;
 		for(Observatory obs : observatories) {
 			if(obs.averageColor() > largestAverage.averageColor()) {
 				largestAverage = obs;

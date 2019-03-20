@@ -61,9 +61,8 @@ public class Observatory extends Galamsey {
 		this.areaCovered = area;
 	}
 	
-	public void setEvent(Galamsey[] events) {
-		for(Galamsey event : events ) {
-			this.galamseyEvents.add(event);		}
+	public void setEvent(Galamsey events) {
+		this.galamseyEvents.add(events);		
 	}
 	
 	public String getName() {
