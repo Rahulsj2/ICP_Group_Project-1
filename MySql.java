@@ -27,7 +27,7 @@ public class MySql{
 			}
 		}
 		catch(Exception e) {
-			System.out.println("unable to connect");
+			System.out.println("Unable to Connect");
 			System.out.println(e);
 			
 		}
