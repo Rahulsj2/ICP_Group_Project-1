@@ -4,7 +4,10 @@
 package galamsey;
 
 /**
- * @author rahulsrinivas
+ * @author Rahul Srinivas
+ * @author Jefferson Welbeck
+ * @author Pamela Anang
+ * @author Albert Hodo
  *
  */
 import java.util.Map;
