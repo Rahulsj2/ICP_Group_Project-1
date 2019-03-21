@@ -2,7 +2,6 @@
  * 
  */
 package galamsey;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
